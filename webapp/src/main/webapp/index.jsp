@@ -1,2 +1,1 @@
-Hello, World! version 2.0
-testing
+Hello, World! version 3.0

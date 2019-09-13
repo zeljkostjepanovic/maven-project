@@ -7,6 +7,9 @@ pipeline {
     }
     stages {
         stage('Build') {
+            options {
+              buildDiscarder(logRotator(numToKeepStr: '1'))
+            }
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }

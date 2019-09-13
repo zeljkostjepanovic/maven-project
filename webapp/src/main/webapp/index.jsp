@@ -11,6 +11,6 @@
 <h3>Hi all</h3><br>
 <strong>Current Time is</strong>: <%=new Date() %>
 <br/>
-<div>Testing jsp, ver 1.3, testing :P</div>
+<div>Testing jsp, ver 1.4, testing :P</div>
 </body>
 </html>

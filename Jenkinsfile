@@ -2,14 +2,15 @@ pipeline {
   /* Declarative pipeline */
     agent any
 
+    options {
+      buildDiscarder(logRotator(numToKeepStr: '1'))
+    }
+
     triggers {
       pollSCM('H/2 * * * 1-5')
     }
     stages {
         stage('Build') {
-            options {
-              buildDiscarder(logRotator(numToKeepStr: '1'))
-            }
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
